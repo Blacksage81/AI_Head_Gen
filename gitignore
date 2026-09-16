@@ -1,0 +1,27 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+
+# Editor/OS cruft
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Packaging output - built zips shouldn't be committed, they're built
+# from source on demand
+*.zip
+
+# Everything the add-on downloads/builds at install or first-run time
+# lives outside this repo entirely (under Blender's own extension user
+# data directory - gnm_env/, landmark_env/, gnm_cache/, landmark_cache/
+# are siblings of the installed extension, not inside it), so there's
+# nothing runtime-generated to ignore here. This entry is a safety net
+# only, in case any of those ever get created alongside the source by
+# mistake during local testing.
+/gnm_env/
+/landmark_env/
+/gnm_cache/
+/landmark_cache/
+/wheels/*.whl
